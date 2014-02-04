@@ -1,0 +1,58 @@
+Auction,Auction
+Completed Auction,Completed Auction
+Your Price,Your Price
+greater than,greater than
+Bid,Bid
+Bids,Bids
+Current Price,Current Price
+Bidder,Bidder
+Start Price,Start Price
+Start Time,Start Time
+Close Time,Close Time
+Your price must be great or equal,Your price must be great or equal
+Your price must be less or equal,Your price must be less or equal
+Close Price,Close Price
+Winner,Winner
+None,None
+Bids History,Bids History
+Timeleft,Timeleft
+Bid Amount,Bid Amount
+Bid Time,Bid Time
+This auction has not bids,This auction has not bids
+My AuctionBids,My AuctionBids
+Product Name,Product Name
+Bidder Name,Bidder Name
+Bid Price,Bid Price
+Bid Time,Bid Time
+You have placed no bids,You have placed no bids
+You have not a bidder name to use in our Auction system! Please create a bidder nickname by form bellow,You have not a bidder name to use in our Auction system! Please create a bidder nickname by form bellow
+waiting,waiting
+Please enter bidder name,Please enter bidder name
+The name is existed,The name is existed
+There are no auction products.,There are no auction products.
+Reserved Price,Reserved Price
+Extended Time,Extended Time
+Multiple Winner,Multiple Winner
+Auto Bids,Auto Bids
+Watchers,Watchers
+Placed Date,Placed Date
+My Watched Autions,My Watched Autions
+My Bids,My Bids
+My Auto Bids,My Auto Bids
+My Watch List,My Watch List
+Placed Price,Placed Price
+Watch this,Watch this
+Stop Watching,Stop Watching
+Standard bid,Standard bid
+Autobid,Autobid
+Auto bid,Auto bid
+Bid successful,Bid successful
+"An error occur, try bid again please","An error occur, try bid again please"
+You did not login yet,You did not login yet
+You have not bidder name,You have not bidder name
+Invalid bid price,Invalid bid price
+Your bid is highest,Your bid is highest
+You have placed a autobid for this auction,You have placed a autobid for this auction
+Autobid successful,Autobid successful
+Cancel bid sucessful!,Cancel bid sucessful!
+Cancel bid failed!,Cancel bid failed!
