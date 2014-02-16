@@ -2033,6 +2033,10 @@ class Mage_Sales_Model_Order extends Mage_Sales_Model_Abstract
         return Mage::helper('core')->formatDate($this->getCreatedAtStoreDate(), $format, true);
     }
 
+    public function getCustomerVat(){
+        $this->getData('customer_taxvat');
+    }
+
     public function getEmailCustomerNote()
     {
         if ($this->getCustomerNoteNotify()) {

@@ -53,8 +53,9 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                     </tr>
                     <tr>
                         <td>
-                            <h2 style="font-size:18px; font-weight:normal; margin:0;">Uw factuur #{{var
-                                invoice.increment_id}} voor bestelling #{{var order.increment_id}} <small>(geplaatst op {{var invoice.getCreatedAt()}})</small></h2>
+                            <b>Factuur # :</b> {{var invoice.increment_id}} <br/>
+                            <b>Bestelling # :</b>  {{var order.increment_id}} <br />
+                            <b>Factuurdatum :</b>  {{var invoice.getCreatedAtDateFormatted()}}
                         </td>
                     </tr>
                     <tr>
@@ -77,6 +78,7 @@ body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif;
                                     <td valign="top"
                                         style="font-size:12px; padding:7px 9px 9px 9px; border-left:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; border-right:1px solid #EAEAEA;">
                                         {{var order.billing_address.format('html')}}
+                                        {{var order.getCustomerVat()}}
                                     </td>
                                     <td>&nbsp;</td>
                                     <td valign="top"
