@@ -2,7 +2,7 @@
 "Sort By","Sorteer op"
 "Contact Information","Contact Informatie"
 "Contact Us","Contacteer Ons"
-"By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.","Door bij ons een account aan te maken zal veilingen kunnen volgen, bieden, verleden aankopen bekijken en veel meer."
+"By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.","Door bij ons een account aan te maken, zal u veilingen kunnen volgen, bieden, eerdere aankopen bekijken en veel meer."
 "New Customers","Nieuwe Klanten"
 "Registered Customers","Geregistreerde klanten"
 "If you have an account with us, please log in.","Indien u een account heeft, gelieve in te loggen."
@@ -10,7 +10,7 @@
 "Login or Create an Account","Log in of registreer"
 "Shopping Cart is Empty","Winkelwagen is leeg"
 "Your shopping cart is empty","Uw winkelwagen is leeg"
-"Click <a href="%s">here</a> to continue shopping.","Klik <a href="%s">hier</a> om verder te winkelen."
+"Click <a href=%s"">here</a> to continue shopping.","Klik <a href=""%s"">hier</a> om verder te winkelen."
 "Enter Bidder Name","Geef een naam in"
 "My Bids","Mijn Biedingen"
 "You have not a bidder name to use in our Auction system! Please create a bidder nickname by form bellow","Je hebt nog geen bieder-alias! Maak hieronder één aan."
@@ -50,4 +50,3 @@
 "Winner","Winnaar"
 "Close Time","Sluitingstijd"
 "None","Geen"
-

@@ -44,11 +44,11 @@ try {
     Mage::getConfig()->init()->loadEventObservers('crontab');
     Mage::app()->addEventArea('crontab');
     Mage::dispatchEvent('default');
-echo("Sending!");
+//echo("Sending!");
 } catch (Exception $e) {
     Mage::printException($e);
 }
 
-echo("Done sending!");
+//echo("Done sending!");
 
 

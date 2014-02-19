@@ -8,7 +8,7 @@
 <?php $_productCollection=$this->getLoadedProductCollection() ?>
 <?php if(!$_productCollection->count()): ?>
 <div class="note-msg">
-    <?php echo $this->__('There are no auction products.') ?>
+    <?php /*echo $this->__('There are no auction products.')*/ echo $this->__('Er zijn op dit moment geen lopende veilingen. Kom later nog eens terug!') ?>
 </div>
 <?php else: ?>
 <?php $now_time = Mage::getModel('core/date')->timestamp(time()) ?>

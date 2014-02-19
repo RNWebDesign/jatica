@@ -280,7 +280,7 @@ class Mage_XmlConnect_CustomerController extends Mage_XmlConnect_Controller_Acti
                             $session->getBeforeAuthUrl(),
                             Mage::app()->getStore()->getId()
                         );
-                        $message = $this->__('Account confirmation is required. Please check your email for the confirmation link.');
+                        $message = $this->__('Account bevestiging is vereist. Believe je email te controlleren en op de bevestigingslink te klikken.');
                         /** @var $messageXmlObj Mage_XmlConnect_Model_Simplexml_Element */
                         $messageXmlObj = Mage::getModel('xmlconnect/simplexml_element', '<message></message>');
                         $messageXmlObj->addChild('status', self::MESSAGE_STATUS_SUCCESS);

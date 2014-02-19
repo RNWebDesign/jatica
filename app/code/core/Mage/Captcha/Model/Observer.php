@@ -46,7 +46,7 @@ class Mage_Captcha_Model_Observer
         if ($captchaModel->isRequired()) {
             $controller = $observer->getControllerAction();
             if (!$captchaModel->isCorrect($this->_getCaptchaString($controller->getRequest(), $formId))) {
-                Mage::getSingleton('customer/session')->addError(Mage::helper('captcha')->__('Incorrect CAPTCHA.'));
+                Mage::getSingleton('customer/session')->addError(Mage::helper('captcha')->__('Onjuiste CAPTCHA.'));
                 $controller->setFlag('', Mage_Core_Controller_Varien_Action::FLAG_NO_DISPATCH, true);
                 $controller->getResponse()->setRedirect(Mage::getUrl('*/*/forgotpassword'));
             }
@@ -70,7 +70,7 @@ class Mage_Captcha_Model_Observer
         if ($captchaModel->isRequired($login)) {
             $word = $this->_getCaptchaString($controller->getRequest(), $formId);
             if (!$captchaModel->isCorrect($word)) {
-                Mage::getSingleton('customer/session')->addError(Mage::helper('captcha')->__('Incorrect CAPTCHA.'));
+                Mage::getSingleton('customer/session')->addError(Mage::helper('captcha')->__('Onjuiste CAPTCHA.'));
                 $controller->setFlag('', Mage_Core_Controller_Varien_Action::FLAG_NO_DISPATCH, true);
                 Mage::getSingleton('customer/session')->setUsername($login);
                 $beforeUrl = Mage::getSingleton('customer/session')->getBeforeAuthUrl();
@@ -95,7 +95,7 @@ class Mage_Captcha_Model_Observer
         if ($captchaModel->isRequired()) {
             $controller = $observer->getControllerAction();
             if (!$captchaModel->isCorrect($this->_getCaptchaString($controller->getRequest(), $formId))) {
-                Mage::getSingleton('customer/session')->addError(Mage::helper('captcha')->__('Incorrect CAPTCHA.'));
+                Mage::getSingleton('customer/session')->addError(Mage::helper('captcha')->__('Onjuiste CAPTCHA.'));
                 $controller->setFlag('', Mage_Core_Controller_Varien_Action::FLAG_NO_DISPATCH, true);
                 Mage::getSingleton('customer/session')->setCustomerFormData($controller->getRequest()->getPost());
                 $controller->getResponse()->setRedirect(Mage::getUrl('*/*/create'));
@@ -120,7 +120,7 @@ class Mage_Captcha_Model_Observer
                 $controller = $observer->getControllerAction();
                 if (!$captchaModel->isCorrect($this->_getCaptchaString($controller->getRequest(), $formId))) {
                     $controller->setFlag('', Mage_Core_Controller_Varien_Action::FLAG_NO_DISPATCH, true);
-                    $result = array('error' => 1, 'message' => Mage::helper('captcha')->__('Incorrect CAPTCHA.'));
+                    $result = array('error' => 1, 'message' => Mage::helper('captcha')->__('Onjuiste CAPTCHA.'));
                     $controller->getResponse()->setBody(Mage::helper('core')->jsonEncode($result));
                 }
             }
@@ -144,7 +144,7 @@ class Mage_Captcha_Model_Observer
                 $controller = $observer->getControllerAction();
                 if (!$captchaModel->isCorrect($this->_getCaptchaString($controller->getRequest(), $formId))) {
                     $controller->setFlag('', Mage_Core_Controller_Varien_Action::FLAG_NO_DISPATCH, true);
-                    $result = array('error' => 1, 'message' => Mage::helper('captcha')->__('Incorrect CAPTCHA.'));
+                    $result = array('error' => 1, 'message' => Mage::helper('captcha')->__('Onjuiste CAPTCHA.'));
                     $controller->getResponse()->setBody(Mage::helper('core')->jsonEncode($result));
                 }
             }
@@ -167,7 +167,7 @@ class Mage_Captcha_Model_Observer
         if ($captchaModel->isRequired($login)) {
             if (!$captchaModel->isCorrect($this->_getCaptchaString(Mage::app()->getRequest(), $formId))) {
                 $captchaModel->logAttempt($login);
-                Mage::throwException(Mage::helper('captcha')->__('Incorrect CAPTCHA.'));
+                Mage::throwException(Mage::helper('captcha')->__('Onjuiste CAPTCHA.'));
             }
         }
         $captchaModel->logAttempt($login);
@@ -203,7 +203,7 @@ class Mage_Captcha_Model_Observer
                 if (!$captchaModel->isCorrect($this->_getCaptchaString($controller->getRequest(), $formId))) {
                     $this->_getBackendSession()->setEmail((string) $controller->getRequest()->getPost('email'));
                     $controller->setFlag('', Mage_Core_Controller_Varien_Action::FLAG_NO_DISPATCH, true);
-                    $this->_getBackendSession()->addError(Mage::helper('captcha')->__('Incorrect CAPTCHA.'));
+                    $this->_getBackendSession()->addError(Mage::helper('captcha')->__('Onjuiste CAPTCHA.'));
                     $controller->getResponse()->setRedirect(Mage::getUrl('*/*/forgotpassword'));
                 }
             }

@@ -168,7 +168,7 @@ class Mage_Customer_AccountController extends Mage_Core_Controller_Front_Action
                     // Mage::logException($e); // PA DSS violation: this exception log can disclose customer password
                 }
             } else {
-                $session->addError($this->__('Login and password are required.'));
+                $session->addError($this->__('Login en wachtwoord zijn vereist.'));
             }
         }
 
@@ -342,7 +342,7 @@ class Mage_Customer_AccountController extends Mage_Core_Controller_Front_Action
                             $session->getBeforeAuthUrl(),
                             Mage::app()->getStore()->getId()
                         );
-                        $session->addSuccess($this->__('Account confirmation is required. Please, check your email for the confirmation link. To resend the confirmation email please <a href="%s">click here</a>.', Mage::helper('customer')->getEmailConfirmationUrl($customer->getEmail())));
+                        $session->addSuccess($this->__('Account bevestiging is vereist. Believe je email te controlleren en op de bevestigingslink te klikken. Om de bevestigingsmail opnieuw te versturen <a href="%s">klik hier</a>.', Mage::helper('customer')->getEmailConfirmationUrl($customer->getEmail())));
                         $this->_redirectSuccess(Mage::getUrl('*/*/index', array('_secure'=>true)));
                         return;
                     } else {
@@ -365,7 +365,7 @@ class Mage_Customer_AccountController extends Mage_Core_Controller_Front_Action
                 $session->setCustomerFormData($this->getRequest()->getPost());
                 if ($e->getCode() === Mage_Customer_Model_Customer::EXCEPTION_EMAIL_EXISTS) {
                     $url = Mage::getUrl('customer/account/forgotpassword');
-                    $message = $this->__('There is already an account with this email address. If you are sure that it is your email address, <a href="%s">click here</a> to get your password and access your account.', $url);
+                    $message = $this->__('Er is reeds een account met dit email adres. Als je de eigenaar bent van dit email adres, <a href="%s">klik dan hier</a> om je wachtwoord te krijgen en toegang te krijgen tot je account.', $url);
                     $session->setEscapeMessages(false);
                 } else {
                     $message = $e->getMessage();
@@ -391,7 +391,8 @@ class Mage_Customer_AccountController extends Mage_Core_Controller_Front_Action
     protected function _welcomeCustomer(Mage_Customer_Model_Customer $customer, $isJustConfirmed = false)
     {
         $this->_getSession()->addSuccess(
-            $this->__('Thank you for registering with %s.', Mage::app()->getStore()->getFrontendName())
+            //$this->__('Thank you for registering with %s.', Mage::app()->getStore()->getFrontendName())
+			$this->__('Bedankt voor het registreren bij %s.', Mage::app()->getStore()->getFrontendName())
         );
         if ($this->_isVatValidationEnabled()) {
             // Show corresponding VAT message to customer
